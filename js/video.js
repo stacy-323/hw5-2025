@@ -15,6 +15,7 @@ window.addEventListener("load", function() {
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play();
+	volLabel.textContent = volSlider.value + "%";
 });
 
 // Pause Video
@@ -25,7 +26,6 @@ document.querySelector("#pause").addEventListener("click", function() {
 // Update the volumne information
 let volSlider = document.getElementById("slider");
 let volLabel = document.getElementById("volume");
-volLabel.textContent = volSlider.value + "%";
 
 function updateVolSlider() {
 	volLabel.textContent = volSlider.value + "%";
